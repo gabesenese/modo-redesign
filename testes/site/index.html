@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="escuro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Site de prova do modo redesign</title>
+    <link rel="stylesheet" href="/estilo.css" />
+    <script type="module" src="/recarregar.js"></script>
+  </head>
+  <body>
+    <header class="topo">
+      <a class="marca" href="/">Marca</a>
+      <nav class="menu">
+        <a href="/um">Um</a>
+        <a href="/dois">Dois</a>
+        <a href="/tres">Três</a>
+      </nav>
+    </header>
+    <main class="conteudo" data-dica="dica do próprio site">
+      <h1 class="titulo">Título de prova com <em>destaque</em></h1>
+      <p class="frase">Uma frase qualquer para editar no lugar.</p>
+      <div class="cartoes">
+        <article class="cartao"><h3 class="cartao-titulo">Primeiro</h3></article>
+        <article class="cartao"><h3 class="cartao-titulo">Segundo</h3></article>
+        <article class="cartao"><h3 class="cartao-titulo">Terceiro</h3></article>
+      </div>
+      <ul class="grade">
+        <li>Um</li>
+        <li>Dois</li>
+      </ul>
+      <button class="abrir-modal" type="button">Abrir modal</button>
+      <form class="formulario" action="/enviado" method="post">
+        <button class="enviar" type="submit">Enviar formulário</button>
+      </form>
+    </main>
+    <dialog class="modal">
+      <h2 class="modal-titulo">Dentro do modal</h2>
+      <button class="fechar-modal" type="button">Fechar</button>
+    </dialog>
+    <script>
+      const modal = document.querySelector(".modal");
+      document.querySelector(".abrir-modal").addEventListener("click", () => modal.showModal());
+      document.querySelector(".fechar-modal").addEventListener("click", () => modal.close());
+    </script>
+  </body>
+</html>

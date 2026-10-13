@@ -1,0 +1,115 @@
+:root {
+  --marca: #e4a30b;
+  --texto: #f2f2f4;
+  --fundo: #121214;
+  --cartao: #1d1d21;
+  --destaque: 228, 163, 11;
+}
+
+html[data-theme="claro"] {
+  --texto: #18181b;
+  --fundo: #fafaf8;
+  --cartao: #ffffff;
+}
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font: 16px/1.5 system-ui, sans-serif;
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+}
+
+.menu {
+  display: flex;
+  gap: 16px;
+}
+
+.menu a,
+.marca {
+  color: var(--texto);
+  text-decoration: none;
+}
+
+.conteudo {
+  padding: 32px;
+}
+
+html body main .titulo {
+  font-size: 48px;
+  letter-spacing: 0;
+  margin: 0 0 16px;
+}
+
+.titulo em {
+  font-style: normal;
+  color: rgb(var(--destaque));
+}
+
+.frase {
+  color: var(--texto);
+  margin: 0 0 24px;
+}
+
+.cartoes {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.cartao {
+  flex: 1;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--cartao);
+  transition: opacity 600ms ease, background-color 600ms ease;
+}
+
+.cartao-titulo {
+  margin: 0;
+  font-size: 18px;
+}
+
+.abrir-modal,
+.enviar {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--marca);
+  color: #000;
+  font: inherit;
+}
+
+.formulario {
+  margin-top: 12px;
+}
+
+.modal {
+  padding: 24px;
+  border: 0;
+  border-radius: 16px;
+  background: var(--cartao);
+  color: var(--texto);
+  backdrop-filter: blur(8px);
+}
+
+.modal-titulo {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.grade {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
